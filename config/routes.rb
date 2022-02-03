@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root 'polls#index'
   post '/vote' => 'polls#vote', as: :vote
+  post '/ranking' => 'polls#ranking', as: :ranking
 end
