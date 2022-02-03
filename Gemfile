@@ -73,4 +73,6 @@ end
 
 gem "tailwindcss-rails", "~> 2.0"
 
-gem "rubocop"
+group :development do
+  gem 'rubocop', require: false
+end
