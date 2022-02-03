@@ -12,7 +12,7 @@ poll = Poll.create(finished_at: nil)
 
 poll.poll_options.create [
   { name: 'Java',
-    photo: 'http://assets.stickpng.com/images/58480979cef1014c0b5e4901.png' },
+    photo: 'https://cdn-icons-png.flaticon.com/512/226/226777.png' },
   { name: 'C#',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png' },
   { name: 'PHP',

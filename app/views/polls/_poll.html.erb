@@ -9,12 +9,21 @@
                           method: :post,
                           params: { poll_option_id: item.id },
                           class: 'flex-grow flex items-center border border-gray-600 text-left p-4',
-                          form_class: 'w-100 flex') do %>
+                          form_class: 'w-100 flex') do
+            %>
                 <h2 class="text-2xl text-slate-800 font-bold flex-grow">
                     <%= item.name %>
                 </h2>
                 <%= image_tag(item.photo, class: 'w-16 h-16 object-contain') %>
             <% end %>
         <% end %>
+        <%= button_to(ranking_url,
+                        method: :post,
+                        class: 'block text-center p-4 text-white bg-violet-800 hover:bg-violet-900 flex-grow',
+                        form_class: 'w-100 flex flex-grow') do
+        %>
+            Ver ranking
+        <% end %>
+
     </div>
 </div> 

@@ -1,0 +1,35 @@
+<%= turbo_stream.replace 'poll-container' do %>
+    <div id="poll-container">
+        <h1 class="text-4xl font-bold">
+            Porcentagens dos votos
+        </h1>
+        <div class="flex flex-col gap-4 w-100 mt-8">
+            <% @poll_options.each do |item| %>
+              <div class="flex-grow flex border border-gray-600 p-4 flex-col">
+                <div class="flex flex-row flex-grow items-center text-left">
+                    <h2 class="text-2xl text-slate-800 font-bold flex-grow">
+                        <%= item.name %>
+                    </h2>
+                    <%= image_tag(item.photo, class: 'w-16 h-16 object-contain') %>
+                </div>
+                <div class="flex flex row flex grow">
+                    <div class="flex flex-col flex-grow">
+                        <div class="relative pt-1">
+                            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-violet-200">
+                                <div style="width: <%= item.percentage %>%" 
+                                     class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-violet-500">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mr-4 flex-grow italic"><%= item.percentage %>% -  <%= item.votes %> votos</p>
+                    </div>
+                </div>
+              </div>
+            <% end %>
+            <%= link_to('Voltar',
+                    root_path,
+                    class: 'block text-center p-4 text-white bg-violet-800 hover:bg-violet-900')
+            %>
+        </div>
+    </div> 
+<% end %> 
