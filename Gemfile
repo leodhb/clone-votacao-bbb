@@ -11,8 +11,8 @@ gem 'rails', '~> 7.0.1'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# Use Postgres as the database for Active Record
+gem 'pg', '~> 1.3'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
@@ -77,4 +77,7 @@ gem 'tailwindcss-rails', '~> 2.0'
 
 group :development do
   gem 'rubocop', require: false
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.4'
+
 end
