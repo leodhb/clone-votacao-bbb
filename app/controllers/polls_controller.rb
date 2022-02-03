@@ -9,5 +9,9 @@ class PollsController < ApplicationController
   def vote
     @poll_option = PollOption.find(params[:poll_option_id])
     @poll_option.increment!(:votes)
+
+    respond_to do |format|
+      format.turbo_stream { render :vote }
+    end
   end
 end
