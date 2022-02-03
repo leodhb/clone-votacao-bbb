@@ -5,4 +5,9 @@ class PollsController < ApplicationController
     @poll = Poll.where(finished_at: nil).last
     @poll_options = @poll.poll_options.order(:name)
   end
+
+  def vote
+    @poll_option = PollOption.find(params[:poll_option_id])
+    @poll_option.increment!(:votes)
+  end
 end
