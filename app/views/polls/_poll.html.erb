@@ -5,7 +5,9 @@
     </h1>
     <div class="flex flex-col gap-4 w-100 mt-8">
         <% @poll_options.each do |item| %>
-            <%= button_to('',
+            <%= button_to(vote_url,
+                          method: :post,
+                          params: { poll_option_id: item.id },
                           class: 'flex-grow flex items-center border border-gray-600 text-left p-4',
                           form_class: 'w-100 flex') do %>
                 <h2 class="text-2xl text-slate-800 font-bold flex-grow">
