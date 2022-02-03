@@ -24,13 +24,7 @@ Metrics/PerceivedComplexity:
 # Offense count: 4
 # Configuration parameters: AllowedConstants.
 Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'app/helpers/application_helper.rb'
-    - 'config/application.rb'
-    - 'db/migrate/20220203011000_create_polls.rb'
-    - 'db/migrate/20220203011615_create_poll_options.rb'
+  Enabled: false
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -43,4 +37,4 @@ Style/IfUnlessModifier:
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
 Layout/LineLength:
-  Max: 80
+  Max: 120
